@@ -24,13 +24,27 @@
   }
   .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
     gap: 10px;
     padding: 20px;
   }
   .graph {
     border: 1px solid #ccc;
     padding: 10px;
+  }
+
+  /* Media query for tablet and larger screens */
+  @media (min-width: 768px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Media query for larger screens */
+  @media (min-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 </style>
 </head>
@@ -40,24 +54,7 @@
     <h1>Driver Alertness Monitoring System</h1>
   </header>
   <div class="container">
-    <div class="graph">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2238142/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-    </div>
-    <div class="graph">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2238142/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-    </div>
-    <div class="graph">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2238142/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-    </div>
-    <div class="graph">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2238142/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-    </div>
-    <div class="graph">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2238142/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-    </div>
-    <div class="graph">
-        <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2238142/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-    </div>
+    <!-- Your iframes go here -->
   </div>
 </body>
 </html>
